@@ -1,4 +1,4 @@
-# Attention Inverse-Temperature in Transformers: Testing the Entropic Brain Hypothesis
+# Entropy is NOT All You Need: Testing the Entropic Brain Hypothesis by Probing Attention Inverse Temperature in Transformers.
 
 Mechanistic study of how attention inverse-temperature (β) shapes generation in
 Llama-3.2-1B-Instruct, framed against neuroscientific models of the psychedelic
@@ -9,10 +9,9 @@ state (the Entropic Brain Hypothesis, EBH, and REBUS).
 Under the Hopfield interpretation of attention, lowering β flattens the attention
 energy landscape (blurs attention sharpness). This parallels REBUS's "flattening
 of the variational free-energy landscape" under psychedelics (Carhart-Harris &
-Friston, 2019). Since β is literally an inverse-temperature, lowering it
-implements that temperature-raising move in attention space.
+Friston, 2019). 
 
-**Hypothesis:** flattening the landscape via β causally produces loosened,
+**Hypothesis:** Flattening the landscape via β causally produces loosened,
 psychedelic-like reasoning by raising entropy (an EBH-style prediction).
 
 ## Methods
@@ -63,7 +62,7 @@ metric would miss.
 collapsed local coherence (perplexity ≈3.7 → ≈19.5) while output stayed
 non-degenerate.
 
-**But the entropy signatures don't match EBH:**
+**But not all entropy signatures matched EBH:**
 
 - Attention-weight entropy rose at intervened layers (consistent with EBH).
 - Spatial-complexity (across-unit activation entropy) was flat (0–0.16%);
@@ -83,7 +82,7 @@ A necessity/sufficiency dissociation shows **entropy is not the cause:**
   sufficient.
 - **Necessity:** raising **attention-weight entropy** while restoring the output
   toward baseline reproduced ~5% → entropy is not necessary.
-- **Direct lever:** directly **raising degree entropy** (independent of β, +0.2
+- **Direct intervention:** directly **raising degree entropy** (independent of β, +0.2
   to +0.43 nats) left reasoning unchanged at every layer (coherence 1.0,
   perplexity ≈baseline). Forcing it downward collapsed generation. The
   EBH-favorable direction produced no loosening.

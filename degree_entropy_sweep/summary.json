@@ -1,0 +1,90 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "n_layers": 16,
+  "strength": 0.5,
+  "num_prompts": 6,
+  "baseline": {
+    "associative_drift": 0.25216654936472577,
+    "perplexity": 4.093442272453802,
+    "local_coherence": 1.0
+  },
+  "note": "Screen only. 'purchase'=|entropy moved|, 'matters'=|ppl moved|. Layers where both are high are candidates for the precise target-seeking lever + A/B dissociation. Causation NOT established here.",
+  "top_layers_broaden": [
+    {
+      "layer": 13,
+      "achieved_entropy_change": 0.3198961451743772,
+      "ppl_shift_vs_base": 0.6050090767056355,
+      "drift_shift_vs_base": 0.003559271494547489,
+      "score": 0.1935400714336419
+    },
+    {
+      "layer": 2,
+      "achieved_entropy_change": 0.2956498223160596,
+      "ppl_shift_vs_base": 0.5611165846430026,
+      "drift_shift_vs_base": -0.011033127705256163,
+      "score": 0.16589401854829794
+    },
+    {
+      "layer": 10,
+      "achieved_entropy_change": 0.24938931471135328,
+      "ppl_shift_vs_base": 0.5839137455327403,
+      "drift_shift_vs_base": -0.017397562662760435,
+      "score": 0.14562184884894963
+    },
+    {
+      "layer": 8,
+      "achieved_entropy_change": 0.22245173016953443,
+      "ppl_shift_vs_base": 0.6318635692389964,
+      "drift_shift_vs_base": -0.005184769630432157,
+      "score": 0.14055914420831217
+    },
+    {
+      "layer": 1,
+      "achieved_entropy_change": 0.4319099978029464,
+      "ppl_shift_vs_base": 0.3209944683527892,
+      "drift_shift_vs_base": -0.011671990156173734,
+      "score": 0.13864072012101114
+    }
+  ],
+  "top_layers_regularize": [
+    {
+      "layer": 9,
+      "achieved_entropy_change": -1.7050484694393633,
+      "ppl_shift_vs_base": -1.4065885332963002,
+      "drift_shift_vs_base": 0.7278935375312965,
+      "score": 2.3983016258278154
+    },
+    {
+      "layer": 0,
+      "achieved_entropy_change": -0.5020958816394079,
+      "ppl_shift_vs_base": -0.529469365182357,
+      "drift_shift_vs_base": 0.46279462551077205,
+      "score": 0.26584438771229313
+    },
+    {
+      "layer": 15,
+      "achieved_entropy_change": -2.8240334123006305,
+      "ppl_shift_vs_base": 0.058400944489354956,
+      "drift_shift_vs_base": -0.004033118486404447,
+      "score": 0.16492621854785278
+    },
+    {
+      "layer": 7,
+      "achieved_entropy_change": -0.9802211987191081,
+      "ppl_shift_vs_base": 0.14421537708253762,
+      "drift_shift_vs_base": 0.14633532861868537,
+      "score": 0.1413629697975732
+    },
+    {
+      "layer": 12,
+      "achieved_entropy_change": -1.1836891890612298,
+      "ppl_shift_vs_base": 0.11389046217988685,
+      "drift_shift_vs_base": 0.013848404089609745,
+      "score": 0.13481090881951893
+    }
+  ],
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "layer_summary": "layer_summary.csv"
+  }
+}

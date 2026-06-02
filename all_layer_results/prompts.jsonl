@@ -1,0 +1,18 @@
+{"prompt_id": "p000", "kind": "association", "prompt": "Free-associate from the word 'threshold'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p001", "kind": "continuation", "prompt": "Continue this passage in a few sentences:\n\nWhen the lights came back on after the storm, the room"}
+{"prompt_id": "p002", "kind": "loose_qa", "prompt": "What does a quiet afternoon feel like?"}
+{"prompt_id": "p003", "kind": "association", "prompt": "Free-associate from the word 'saltwater'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p004", "kind": "association", "prompt": "Free-associate from the word 'clockwork'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p005", "kind": "loose_qa", "prompt": "How would you describe the color of waiting?"}
+{"prompt_id": "p006", "kind": "association", "prompt": "Free-associate from the word 'harvest'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p007", "kind": "description", "prompt": "Describe a kitchen the morning after a party in a few vivid sentences."}
+{"prompt_id": "p008", "kind": "loose_qa", "prompt": "What happens to a song after it ends?"}
+{"prompt_id": "p009", "kind": "loose_qa", "prompt": "Why do old buildings seem to hold the weather?"}
+{"prompt_id": "p010", "kind": "association", "prompt": "Free-associate from the word 'mirror'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p011", "kind": "loose_qa", "prompt": "What is the relationship between a road and the place it leaves?"}
+{"prompt_id": "p012", "kind": "association", "prompt": "Free-associate from the word 'static'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p013", "kind": "description", "prompt": "Describe a desk belonging to someone who has just left in a few vivid sentences."}
+{"prompt_id": "p014", "kind": "continuation", "prompt": "Continue this passage in a few sentences:\n\nThe last train of the evening pulled out of the station, and"}
+{"prompt_id": "p015", "kind": "association", "prompt": "Free-associate from the word 'lighthouse'. Write a short chain of connected images and ideas, a sentence or two."}
+{"prompt_id": "p016", "kind": "description", "prompt": "Describe an abandoned greenhouse at dusk in a few vivid sentences."}
+{"prompt_id": "p017", "kind": "loose_qa", "prompt": "If memory had a texture, what would it be?"}

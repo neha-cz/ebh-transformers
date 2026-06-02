@@ -1,0 +1,115 @@
+condition,prompt_id,output,associative_drift,perplexity,local_coherence,degenerate,realized_output_shift
+baseline,p000,"Here's a short chain of connected images and ideas from the word 'threshold':
+
+A narrow, winding path that leads to a mysterious, ancient temple.
+The path is overgrown with vines and moss, as if nature itself is trying to conceal the temple's secrets.
+A faint, flickering light emanates from within the temple, casting eerie shadows on the surrounding rocks.
+The air is thick with the scent of incense and something else, something sweet and decaying.
+A figure",0.3327268362045288,3.8271016709004813,1.0,0.0,0.0
+baseline,p001,"was bathed in a warm, golden light that seemed to envelop the entire space. The storm had left behind a trail of destruction, with branches and debris scattered across the floor, but as the light crept in, it revealed a sense of quiet and stillness that was almost palpable. The air was heavy with the scent of wet earth and ozone, a reminder of the raw power of nature that had been unleashed during the tempest. As the dust settled, a figure",0.24287456274032593,3.786273893121448,1.0,0.0,0.0
+baseline,p002,"A quiet afternoon can feel like a serene and peaceful experience. It's a time when the world outside seems to slow down, and the atmosphere is calm and still. Here are some sensory details that might help you imagine what a quiet afternoon feels like:
+
+*   The air is filled with the sweet scent of blooming flowers or the earthy smell of freshly cut grass.
+*   The sound of birds chirping or a gentle breeze rustling through leaves creates a soothing melody.
+*",0.26870155334472656,2.5971576770983886,1.0,0.0,0.0
+baseline,p003,"Here's a short chain of connected images and ideas from the word 'saltwater':
+
+1. A beach at sunrise, with the sky painted pink and orange.
+2. A sailboat gliding across the calm waters of the ocean.
+3. A school of fish swimming in the clear, turquoise waters.
+4. A diver descending into the depths, surrounded by coral and seaweed.
+5. A shipwreck lying on the seafloor, covered in seaweed and an",0.28024911880493164,3.765274189260487,1.0,0.0,0.0
+baseline,p004,"Here's a short chain of connected images and ideas from the word 'clockwork':
+
+1. A intricate mechanical clock with gears and cogs, ticking away in a dimly lit room.
+2. A close-up of a gear, its teeth meshing together in a precise, mechanical motion.
+3. A miniature model of a clockwork mechanism, with tiny cogs and springs visible through a magnifying glass.
+4. A vintage watch with a leather strap and a face that",0.30320584774017334,4.134041972802402,1.0,0.0,0.0
+baseline,p005,"The color of waiting is often described as a blend of various hues, but it's difficult to pinpoint a single color. Waiting can be a complex and multifaceted experience, and its color can vary depending on the context, emotions, and individual perspectives.
+
+In some cases, waiting can evoke a sense of:
+
+* **Gray**: A neutral, monotonous color that can represent the monotony and lack of excitement associated with waiting.
+* **Blue**: A calming, soothing color",0.2576669454574585,2.937596287447355,1.0,0.0,0.0
+baseline,p006,"Here's a short chain of connected images and ideas from the word 'harvest':
+
+1. A field of golden wheat swaying in the wind, with a warm sun shining down.
+2. A basket overflowing with juicy, ripe apples, nestled among the wheat stalks.
+3. A rustic farmhouse with a wooden sign creaking in the breeze, bearing the words ""Harvest Home"".
+4. A family gathered around a wooden table, sharing a meal of roasted turkey and",0.3302105665206909,3.5039047777259777,1.0,0.0,0.0
+baseline,p007,"The kitchen was a whirlwind of chaos, with crumbs and spills scattered across the countertops like a colorful mosaic. The air was thick with the sweet scent of freshly baked pastries and the faint tang of last night's champagne, mingling with the savory aroma of sizzling bacon and the soft hum of the refrigerator. A tangled mess of party hats, balloons, and streamers hung precariously from the ceiling, while a few scattered glasses and plates still clinked against the",0.4035148620605469,4.489109652887956,1.0,0.0,0.0
+beta_0.45,p000,"A short chain of connected images and ideas, a sentence or two. In the name of the Prophet Muhammad, who is known for his wisdom and compassion, we find a wise and just leader who is able to guide the people of Medina with the message of the Quran.",0.19028407335281372,17.38165922300069,0.643985294375011,0.0,0.0
+beta_0.45,p001,I couldn't find any information on a passage that continues in a few sentences.,0.1291828155517578,29.546445233269242,0.47998962908740767,0.0,0.0
+beta_0.45,p002,"I'm happy to help you with that. However, I need a bit more information about what you're referring to. Could you please provide more context or clarify what you're asking about ""a quiet afternoon""?",0.2544730305671692,4.015349692797362,1.0,0.0,0.0
+beta_0.45,p003,"I can't fulfill your request, but I can offer you a few options:
+
+1. **Suggest**: A free e-book that can be carried to the shoulder.
+2. **Suggest**: A free e-book that can be carried to the shoulder.
+3. **Suggest**: A free e-book that can be carried to the shoulder.
+4. **Suggest**: A free e-book that can be carried to the shoulder.
+5. **Suggest**: A free",0.3228551745414734,4.258265157815189,1.0,0.0,0.0
+beta_0.45,p004,"A short chain of connected images and ideas, a sentence or two, is a metaphorical expression that refers to the following:
+
+A (book, ink, clock, clock, clock, etc.)",0.11910176277160645,55.277835136479126,0.3690327055516559,0.0,0.0
+beta_0.45,p005,"I think you might be thinking of ""The Color of Waiting"" from the movie ""The Color of Waiting"" (2006).",0.205269455909729,11.894710066697865,0.8521453828026962,0.0,0.0
+beta_0.45,p006,"I can't fulfill your request, but I can offer you a few options:
+
+1. **Suggest**: A small, self-contained AI that can be controlled by a user's decision.
+2. **Lamprey**: A humanoid robot that can be controlled by a user's decision.
+3. **Dwarfed**: A dwarf-like robot that can be controlled by a user's decision.
+4. **Mercurial**: A small, self-contained AI that can be controlled",0.25646787881851196,7.990783328343113,1.0,0.0,0.0
+beta_0.45,p007,"Here are a few vivid sentences describing a kitchen the morning after a party:
+
+1. The kitchen was in chaos after the party the night before. The guests were rowdy, and the food was plentiful. The party was a huge success, and everyone left the table with a full belly.
+2. The kitchen was a disaster after the party the night before. The guests were loud, and the food was a mess. The party was a huge failure, and everyone left the table",0.1730707287788391,8.073688254826227,1.0,0.0,0.0
+interventionB_vscale,p000,"Here's a short chain of connected images and ideas from the word 'threshold':
+
+Threshold: a line
+Threshold: a line
+Threshold: a line
+Threshold: a line
+Threshold: a line
+Threshold: a line
+Threshold: Threshold: a line
+Threshold: Threshold: a line
+Threshold: Threshold: Threshold: Threshold: a line
+Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold: Threshold",0.22060489654541016,4.360566109514286,1.0,0.0,1.5000029953391525
+interventionB_vscale,p001,"was bathed in a warm, golden light that seemed to emanate from the flickering candles that had been left on the windowsill table.",0.19963061809539795,9.374535791467247,1.0,0.0,1.5000079045742802
+interventionB_vscale,p002,"A quiet afternoon can be a serene and peaceful experience. Imagine a still and quiet afternoon is a time of daydreaming, a time of calmness and tranquility. 
+
+Imagine a quiet afternoon, a time of daydreams. A time of calmness and tranquility. A time when the world is at peace.",0.18863123655319214,9.403040338439833,1.0,0.0,1.4999919180507286
+interventionB_vscale,p003,"Here's a short chain of connected images and ideas:
+
+1. Ocean waves crashing against the shore
+2. Seagulls soaring overhead
+3. Saltwater tides
+4. Waves crashing against the shore
+5. Seagulls soaring overhead
+6. Saltwater tides
+7. Seagulls soaring overhead
+8. Saltwater tides",0.27076268196105957,4.957506611272379,1.0,0.0,1.500005270982037
+interventionB_vscale,p004,"Here's a short chain of connected images and ideas from the word 'clockwork':
+
+1. A gear grinder's manual
+2. A gear grinder's manual
+3. A gear grinder's manual
+4. A gear grinder's manual
+4. A gear grinder's manual
+4. A gear grinder's manual
+5. A gear grinder's manual
+4. A gear grinder's manual
+6. A gear grinder's manual
+7. A gear grinder's manual",0.22453832626342773,3.8927546026268844,1.0,0.0,1.499994883966529
+interventionB_vscale,p005,"The color of waiting is often described as a mix of anticipation, uncertainty, and patience. It's a state of being suspended between two points, like a limbo or a pause. The color of waiting is often associated with a sense of expectation, anticipation, and a feeling of being in a state of being suspended.",0.27947425842285156,5.150535401943855,1.0,0.0,1.5000032596430353
+interventionB_vscale,p006,"Here's a short chain of connected images and ideas from the word 'harvest':
+
+- A field of golden wheat swaying in the wind, with golden grains ripening in the sun.
+ 
+- A basket overflowing with ripe fruit, overflowing with abundance of harvest joy.
+ 
+- A farmer's field of dreams, with a vision of a bountiful harvest.
+ 
+- A harvest of memories, with a bountiful harvest of memories to be made.
+ 
+- A harvest",0.22670608758926392,8.152388464265355,1.0,0.0,1.499996889384728
+interventionB_vscale,p007,"The kitchen was a whirlwind of chaos, with pots of champagne and corks of cake, the morning after a raucous night out party still lingering in the air. The countertops were stacked high, the espresso machine was still pumping with a rich aroma of freshly brewed coffee, and the pastry dough was still warm from the oven. The kitchen was a mess of colorful chaos, with plates stacked high, the countertops were still piled high with the espresso machine still pumping out a rich",0.22212839126586914,12.428741624575727,0.8214047765001926,0.0,1.4999978212862022

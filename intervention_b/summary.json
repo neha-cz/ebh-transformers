@@ -1,0 +1,29 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "target_layers": [
+    2,
+    3
+  ],
+  "mode": "vscale",
+  "target_shift": 1.5,
+  "beta_compare": 0.45,
+  "num_prompts": 8,
+  "note": "Intervention B pins attention weights (entropy unchanged) and perturbs the attention output directly to match beta's output shift.",
+  "verdict": {
+    "baseline_drift": 0.3023937866091728,
+    "beta_drift": 0.20633811503648758,
+    "interventionB_drift": 0.22905956208705902,
+    "beta_drift_gain_over_baseline": -0.09605567157268524,
+    "interventionB_drift_gain_over_baseline": -0.0733342245221138,
+    "fraction_of_beta_effect_reproduced": 0.7634554349726436,
+    "interventionB_realized_output_shift": 1.5000001179033366,
+    "target_shift": 1.5,
+    "interventionB_degenerate": 0.0,
+    "value_pathway_sufficient": true,
+    "interpretation": "Intervention B reproduced >=50% of beta's drift increase with attention-weight entropy pinned at baseline -> the value pathway is sufficient; attention-entropy flattening is not necessary."
+  },
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "summary_by_condition": "summary_by_condition.csv"
+  }
+}

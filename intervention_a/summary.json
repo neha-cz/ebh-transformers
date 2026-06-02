@@ -1,0 +1,25 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "target_layers": [
+    2,
+    3
+  ],
+  "flatten": 0.6,
+  "restore": 0.5,
+  "beta_compare": 0.45,
+  "num_prompts": 8,
+  "verdict": {
+    "realized_entropy_increase": 0.5362527158040532,
+    "realized_output_shift_residual": 0.5891807689802935,
+    "restore": 0.5,
+    "perplexity_fraction_reproduced": 0.05253059292237285,
+    "drift_fraction_reproduced": 0.05380925188797657,
+    "interventionA_degenerate": 0.0,
+    "entropy_necessary": false,
+    "interpretation": "Entropy raised substantially, coherence effect not reproduced -> entropy flattening is NOT necessary for beta's effect (robust: residual output change biases toward an effect)."
+  },
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "summary_by_condition": "summary_by_condition.csv"
+  }
+}

@@ -1,4 +1,4 @@
-# Entropy is NOT All You Need: Testing the Entropic Brain Hypothesis by Probing Attention Inverse Temperature in Transformers.
+# Entropy is NOT All You Need: Testing the Entropic Brain Hypothesis in Transformers by Probing Attention Inverse-Temperature.
 
 Mechanistic study of how attention inverse-temperature (β) shapes generation in
 Llama-3.2-1B-Instruct, framed against neuroscientific models of the psychedelic

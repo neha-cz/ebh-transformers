@@ -1,0 +1,63 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "n_layers": 16,
+  "beta": 0.35,
+  "flattened_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "num_prompts": 8,
+  "patch_calls": {
+    "total": 272,
+    "intervened": 129
+  },
+  "verdict": {
+    "flattened_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "mean_output_rel_l2_shift": 1.3399475621764463,
+    "mean_abs_entropy_shift": 0.2747350091813132,
+    "output_to_entropy_ratio": 4.877236291407268,
+    "value_mixing_supported": false,
+    "interpretation": "output shift is not large relative to entropy shift here; value-mixing is NOT clearly the pathway -- the drift may originate even further downstream, or thresholds need revisiting"
+  },
+  "metric_notes": {
+    "output_rel_l2_shift": "||intervened - baseline|| / ||baseline|| of the pre-o_proj weighted value-sum; LARGE = value-mixing",
+    "entropy_shift": "change in normalized attention-weight entropy; SMALL = weight distribution is not what's moving",
+    "mean_maxprob_baseline": "mean max attention prob; high = peaked/saturated softmax regime (explains entropy insensitivity)"
+  },
+  "files": {
+    "per_prompt_layer_shifts": "per_prompt_layer_shifts.csv",
+    "layer_shift_summary": "layer_shift_summary.csv",
+    "plot": "output_vs_entropy_shift.png"
+  }
+}

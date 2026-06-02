@@ -1,0 +1,82 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "n_layers": 16,
+  "num_prompts": 18,
+  "gen_tokens": 96,
+  "samples_per_prompt": 3,
+  "layer_beta_ratio": 0.35,
+  "patch_calls": {
+    "total": 1228656,
+    "intervened": 80024
+  },
+  "baseline": {
+    "condition": "baseline",
+    "local_coherence": 1.0,
+    "local_coherence_sd": 0.0,
+    "associative_drift": 0.2872077524662018,
+    "associative_drift_sd": 0.06067775809973921,
+    "self_diversity": 0.7033203187146339,
+    "global_coherence": 0.7825688409742224,
+    "attention_entropy": 0.29416777804079985,
+    "perplexity": 3.5491731520145375,
+    "degenerate": 0.0,
+    "n": 18
+  },
+  "strange_layers": [
+    3,
+    11,
+    2,
+    1,
+    7
+  ],
+  "beta_sweep_layers": [
+    3,
+    11,
+    2,
+    1,
+    7
+  ],
+  "interesting_band": {
+    "band_beta_values": [],
+    "sweet_spot_beta": null,
+    "collapse_beta": 0.5,
+    "baseline_drift": 0.2872077524662018,
+    "baseline_local_coherence": 1.0,
+    "found_band": false,
+    "interpretation": "no band by default thresholds; widen beta grid lower or relax thresholds"
+  },
+  "beta_vs_temperature_control": {
+    "comparable": true,
+    "beta_profile": {
+      "max_drift": 0.6322397618658013,
+      "min_local_coherence": 0.3259857179807001,
+      "min_global_coherence": 0.7800383101458902,
+      "max_attention_entropy": 0.31595455467080075
+    },
+    "temperature_profile": {
+      "max_drift": 0.5208549231842712,
+      "min_local_coherence": 0.09508277986238627,
+      "min_global_coherence": 0.7015219728151957,
+      "max_attention_entropy": 0.30232530613257375
+    },
+    "attention_entropy_gap_beta_minus_temp": 0.013629248538227001,
+    "global_coherence_drop_gap_beta_minus_temp": -0.07851633733069452,
+    "distinguishable": false,
+    "interpretation": "beta and temperature look similar on these metrics here; the effect may not be specific to the attention landscape -- investigate"
+  },
+  "metric_notes": {
+    "local_coherence": "clean-model perplexity-derived; higher = more grammatical/local well-formedness",
+    "associative_drift": "1 - cos(prompt, output) under clean model; higher = wanders further",
+    "self_diversity": "type-token ratio over first 120 tokens",
+    "global_coherence": "mean consecutive-sentence cosine similarity; LOW = floaty/disconnected",
+    "signature": "psychedelic-analog = drift/diversity up + local_coherence held + global_coherence down"
+  },
+  "files": {
+    "prompts": "prompts.jsonl",
+    "per_generation_results": "per_generation_results.csv",
+    "per_layer_attention_entropy": "per_layer_attention_entropy.csv",
+    "layer_summary": "layer_summary.csv",
+    "beta_summary": "beta_summary.csv",
+    "temp_summary": "temp_summary.csv"
+  }
+}

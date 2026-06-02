@@ -1,0 +1,35 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "beta": 0.45,
+  "target_layers": [
+    2,
+    3
+  ],
+  "num_prompts": 8,
+  "verdict": {
+    "behavioral_effect_present": {
+      "drift_shift": -0.04738842695951462,
+      "perplexity_shift": 15.762952791198481
+    },
+    "measure_shifts_baseline_to_beta": {
+      "lzc_target": -0.07617167453454154,
+      "spatial_entropy_target": -0.00032098591327667236,
+      "attn_entropy_target": NaN,
+      "lzc_mean": -0.03988700850752158,
+      "spatial_entropy_mean": -0.0015677260234951973,
+      "attn_entropy_mean": NaN
+    },
+    "attn_control_captured": false,
+    "residual_measures_move_more_than_attn": true,
+    "interpretation": "Residual-stream complexity moved more than attention entropy (or moved non-trivially when attn not captured). Necessary precondition met. NEXT: add A/B conditions to test behavioral TRACKING (move under beta/B where behavior moves, flat under A where it doesn't).",
+    "caveats": [
+      "Screening only (baseline vs beta); does NOT establish behavioral tracking.",
+      "n=8 prompts; directional only.",
+      "LZc on token-indexed activations is an analog, not identical; spatial entropy is more robust -- prefer agreement."
+    ]
+  },
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "summary_by_condition": "summary_by_condition.csv"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "beta": 0.45,
+  "target_layers": [
+    2,
+    3
+  ],
+  "densities": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3
+  ],
+  "num_prompts": 8,
+  "verdict": {
+    "behavioral_effect": {
+      "drift_shift": -0.04738842695951462,
+      "perplexity_shift": 15.762952791198481
+    },
+    "graph_metric_shifts_baseline_to_beta": {
+      "degree_entropy": -0.511761879855781,
+      "clustering": -0.057615287035400975,
+      "global_efficiency": -0.00753726741129801
+    },
+    "degree_entropy_moved": true,
+    "matches_ayahuasca_signature": false,
+    "interpretation": "Degree-distribution entropy moved under beta, but the local/global integration pattern does NOT match the ayahuasca signature. Partial; inspect which companion metric diverges.",
+    "caveats": [
+      "Screening only; does NOT establish causation. The advantage of THIS measure is it is interveneable -- a direct degree-entropy intervention is the causal test.",
+      "Attention graph is directed/per-pass/task-driven; brain FC is undirected/resting. Symmetrized here to approximate, but semantics differ.",
+      "Compared at matched edge density across a density sweep to avoid the threshold artifact the paper flagged.",
+      "n=8 prompts; directional only."
+    ]
+  },
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "summary_by_condition": "summary_by_condition.csv"
+  }
+}

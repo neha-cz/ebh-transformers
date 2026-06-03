@@ -1,4 +1,4 @@
-# Entropy is NOT All You Need: Testing the Entropic Brain Hypothesis in Transformers by Probing Attention Inverse-Temperature.
+# Entropy is NOT All You Need: Testing the Entropic Brain Hypothesis in Transformers by Probing Attention Inverse-Temperature
 
 Mechanistic study of how attention inverse-temperature (β) shapes generation in
 Llama-3.2-1B-Instruct, framed against neuroscientific models of the psychedelic
@@ -9,7 +9,9 @@ state (the Entropic Brain Hypothesis, EBH, and REBUS).
 Under the Hopfield interpretation of attention, lowering β flattens the attention
 energy landscape (blurs attention sharpness). This parallels REBUS's "flattening
 of the variational free-energy landscape" under psychedelics (Carhart-Harris &
-Friston, 2019). 
+Friston, 2019). Because β is an inverse-temperature parameter, lowering
+it is the attention-space version of raising temperature — the same move REBUS
+invokes by analogy with simulated annealing.
 
 **Hypothesis:** Flattening the landscape via β causally produces loosened,
 psychedelic-like reasoning by raising entropy (an EBH-style prediction).
@@ -82,8 +84,8 @@ A necessity/sufficiency dissociation shows **entropy is not the cause:**
   sufficient.
 - **Necessity:** raising **attention-weight entropy** while restoring the output
   toward baseline reproduced ~5% → entropy is not necessary.
-- **Direct intervention:** directly **raising degree entropy** (independent of β, +0.2
-  to +0.43 nats) left reasoning unchanged at every layer (coherence 1.0,
+- **Direct intervention:** directly **raising degree entropy** (independent of β,
+  +0.2 to +0.43 nats) left reasoning unchanged at every layer (coherence 1.0,
   perplexity ≈baseline). Forcing it downward collapsed generation. The
   EBH-favorable direction produced no loosening.
 
@@ -91,6 +93,23 @@ A necessity/sufficiency dissociation shows **entropy is not the cause:**
 vectors — which value vectors are mixed, in what proportion, into the residual
 stream — propagating through depth. Entropy increases are co-occurring readouts
 of the same reshaped attention weights, not drivers.
+
+## Extension: does scheduling β help? (annealing)
+
+Since REBUS invokes simulated annealing, we tested whether a **cooling β-schedule**
+— low β early (loose, exploratory), rising to high β late (sharp, committed) —
+could reach a "lucid but loose" state (high drift *with* preserved coherence) that
+no static β achieves. It does not. Every schedule that raised drift above the best
+static-β-at-full-coherence (drift ≈0.27) did so only by losing coherence
+(perplexity rising to 11–22), landing on the same drift/coherence trade-off that
+lowering static β already traces, rather than escaping it.
+
+A natural explanation is the fixed-past asymmetry of autoregressive generation: 
+optimization annealing revises the whole solution as it cools, whereas a language model emits tokens irreversibly,
+so later sharpening can only tidy the remaining tail — it cannot re-cohere text
+already produced under low β. Supporting but not decisive: schedules that spent
+longer in the low-β phase were less coherent (`cool_late` > `cool_linear` >
+`cool_early` in perplexity), as this account predicts.
 
 ## Interpretation
 
@@ -105,11 +124,14 @@ prior precision in brains; disrupted value blending in the transformer).
 - **Mechanism-form, not detail:** β acts bottom-up at early layers; REBUS
   implicates *high-level* prior relaxation. Alignment is "re-weighting as cause,"
   not the full predictive hierarchy.
-- **Annealing asymmetry:** annealing raises temperature to *improve* search; β
-  degraded output — the operation without the benefit.
+- **Annealing does not transfer:** a cooling β-schedule (the autoregressive analog
+  of the annealing REBUS invokes) did not reach loose-yet-coherent output; it slid
+  along the same drift/coherence trade-off as static β. The likely reason — that
+  autoregressive decoding cannot revise tokens emitted while β was low — is
+  consistent with the data but not causally isolated (see Extension).
 - **Scope:** β=0.45, layers 2–3, one 1B model; n=8 (β characterization), n=6
-  (degree-entropy intervention). Directional, not powered; metrics are sensitive
-  to prompt set and small-n noise.
+  (degree-entropy and annealing screens). Directional, not powered; metrics are
+  sensitive to prompt set and small-n noise.
 - **Disanalogy:** brain graph is undirected/resting-state; attention graph is
   directed/causally-masked/task-driven, so the degree-entropy null may reflect
   either no causal role for entropy *or* failure of the analogy to transfer.

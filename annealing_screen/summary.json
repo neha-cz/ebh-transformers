@@ -1,0 +1,110 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "layers": [
+    2,
+    3
+  ],
+  "beta_lo": 0.45,
+  "beta_hi": 1.0,
+  "static_grid": [
+    0.45,
+    0.55,
+    0.65,
+    0.75,
+    0.85,
+    1.0
+  ],
+  "num_prompts": 6,
+  "verdict": {
+    "static_frontier": [
+      {
+        "condition": "static_0.45",
+        "drift": 0.28003260493278503,
+        "coherence": 0.8893800894028939,
+        "perplexity": 10.62717161885031
+      },
+      {
+        "condition": "static_0.55",
+        "drift": 0.23925106724103293,
+        "coherence": 1.0,
+        "perplexity": 4.933840401225894
+      },
+      {
+        "condition": "static_0.65",
+        "drift": 0.24230318268140158,
+        "coherence": 1.0,
+        "perplexity": 4.259925214966011
+      },
+      {
+        "condition": "static_0.75",
+        "drift": 0.27252110838890076,
+        "coherence": 1.0,
+        "perplexity": 3.8768370351515347
+      },
+      {
+        "condition": "static_0.85",
+        "drift": 0.262618084748586,
+        "coherence": 1.0,
+        "perplexity": 4.059578256347149
+      },
+      {
+        "condition": "static_1",
+        "drift": 0.26051973303159076,
+        "coherence": 1.0,
+        "perplexity": 4.2802590994052405
+      }
+    ],
+    "schedules": [
+      {
+        "condition": "cool_early",
+        "drift": 0.31679124633471173,
+        "coherence": 0.7114128422882174,
+        "perplexity": 22.333355598572766,
+        "beats_static_frontier": true
+      },
+      {
+        "condition": "cool_exp",
+        "drift": 0.2998136281967163,
+        "coherence": 0.7114128422882174,
+        "perplexity": 22.072210687941705,
+        "beats_static_frontier": true
+      },
+      {
+        "condition": "cool_late",
+        "drift": 0.3037019670009613,
+        "coherence": 0.8756999344689342,
+        "perplexity": 10.848037530482747,
+        "beats_static_frontier": true
+      },
+      {
+        "condition": "cool_linear",
+        "drift": 0.255786269903183,
+        "coherence": 0.928712591830331,
+        "perplexity": 6.784859685718781,
+        "beats_static_frontier": false
+      },
+      {
+        "condition": "warm_linear",
+        "drift": 0.25856414437294006,
+        "coherence": 1.0,
+        "perplexity": 4.7060090601648845,
+        "beats_static_frontier": false
+      }
+    ],
+    "any_schedule_beats_static_frontier": true,
+    "frontier_beating_schedules": [
+      "cool_early",
+      "cool_exp",
+      "cool_late"
+    ],
+    "interpretation": "At least one cooling schedule reached a (drift, coherence) point that NO static beta dominates -- scheduling accesses a state static flattening cannot. This is a real phenomenon; a causal follow-up is warranted to explain WHY the trajectory matters.",
+    "caveats": [
+      "Screen only, greedy decode, n=6 prompts.",
+      "Frontier test is on mean drift/coherence; per-prompt variance not modeled."
+    ]
+  },
+  "files": {
+    "per_prompt": "per_prompt.csv",
+    "summary": "summary.csv"
+  }
+}
